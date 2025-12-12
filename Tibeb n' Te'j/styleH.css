@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.header{
+    color: #a15b35;
+}
 body {
     background: #faf3e8;
     font-family: "Poppins", sans-serif;
@@ -38,6 +40,7 @@ body {
 .title {
     text-align: center;
     font-size: 2.5rem;
+    color: #a15b35;
     margin-bottom: 10px;
 }
 
@@ -45,52 +48,76 @@ hr {
     border: none;
     height: 2px;
     background: #c9a27e;
-    opacity: 0.5;
+    opacity: 0.6;
     margin-bottom: 20px;
 }
 
-.section {
-    background: rgb(248, 200, 127);
+.section, .section2 {
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px; 
     margin-bottom: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.section {
+    background: #fff6ee; 
 }
 
 .section2 {
-    background: rgba(161, 91, 53, 0.557);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background: #f7d488; 
+    color: #5c3924;
 }
 
+.section h2, .section2 h2 {
+    color: #a15b35; 
+    margin-bottom: 12px;
+}
+
+.section2 ul {
+    list-style: disc;
+    padding-left: 20px; 
+}
 .images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly; 
-    gap: 12px; 
+    justify-content: center; 
+    gap: 15px; 
     padding: 10px;
     margin-top: 20px;
 }
 
 .images img {
-    width: 230px;
+    width: 230px; 
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.25s ease , box-shadow 0.25s ease;
     object-fit: cover;
     aspect-ratio: 4 / 3;
 }
 
-
-.image img:hover {
-    transform: scale(1.05);
+.images img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
+.images p {
+    width: 100%;
+    text-align: center;
+    color: #5c3924; 
+    margin-top: 10px;
+    font-weight: 500;
+}
 .footer {
     text-align: center;
     margin-top: 20px;
     font-size: 0.9rem;
     opacity: 0.7;
+}
+    
+.footer hr {
+    border: none;
+    height: 2px;
+    background: #c9a27e;
+    opacity: 0.6;
+    margin-bottom: 10px;
 }
