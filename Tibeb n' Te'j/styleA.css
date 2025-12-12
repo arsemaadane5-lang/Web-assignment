@@ -119,53 +119,58 @@ hr {
     margin-bottom: 5px;
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="number"],
+.form input[type="text"] {
+    background:  #fff4d1; 
+}
+
+.form input[type="email"] {
+    background:  #d7c4b6;  
+}
+
+.form input[type="number"] {
+    background:  #d7c4b6;   
+}
+
+.form select {
+    background: #fff4d6;  
+}
+
+.form textarea {
+    background: #fff4d1; 
+}
+
+.form input,
 .form select,
 .form textarea {
     width: 100%;
     padding: 12px 15px;
     border-radius: 12px;
     border: 1px solid #d7c4b6;
-    background: #fff9f0;
     margin-bottom: 15px;
     font-size: 0.95rem;
     transition: border 0.2s, box-shadow 0.2s;
 }
 
-.form input[type="text"]:focus,
-.form input[type="email"]:focus,
-.form input[type="number"]:focus,
-.form select:focus,
-
-.session-box {
-    border: 2px solid #d7c4b6;   
-    border-radius: 10px;
-    background: #fff9f0;          
-    padding: 15px;
+.sessionB {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
     margin-bottom: 15px;
 }
 
-.session-box input[type="radio"] {
-    margin-right: 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-.sessionB{
-    border: 2px solid #d7c4b6;   
-    border-radius: 10px;
-    background: #fff9f0;         
-    padding: 15px;
-    margin-bottom: 15px;
+.sessionB label {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 0.95rem;
 }
 
 .sessionB input[type="radio"] {
-    margin-right: 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
+    width: auto;
+    height: auto;
+    margin: 0;
 }
+
 
 .form textarea:focus {
     border-color: #f7d488; 
@@ -205,3 +210,4 @@ hr {
     opacity: 0.8;
     margin-top: 20px;
 }
+
