@@ -37,9 +37,21 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
+.nav a:hover {
+    color: #a15b35; 
     text-decoration: underline;
 }
+
+.nav a.active {
+    color: #a15b35; 
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.nav a:visited {
+    color: #8b4a28; 
+}
+
 
 
 header h1 {
@@ -83,3 +95,4 @@ footer hr {
     opacity: 0.6;
     margin-bottom: 10px;
 }
+
