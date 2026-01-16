@@ -49,7 +49,6 @@ body {
 }
 
 
-
 .title {
     text-align: center;
     font-size: 2.4rem;
@@ -223,4 +222,15 @@ hr {
     margin-top: 20px;
 }
 
+.form-card {
+    background: #fff6ee;
+}
 
+.price-box {
+    background: #f7d488;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 10px 0;
+    text-align: center;
+}

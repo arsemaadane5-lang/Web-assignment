@@ -133,3 +133,17 @@ hr {
     margin-bottom: 10px;
 }
 
+.welcome-card {
+    background: #fff6ee;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.image-card {
+    background: #fff6ee;
+    padding: 20px;
+    border-radius: 15px;
+}

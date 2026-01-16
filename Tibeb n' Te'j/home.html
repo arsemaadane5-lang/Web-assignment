@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="title"> Tibeb n’ T’ej </title>
-     <link rel="stylesheet" href="styleH.css">
+    <link rel="stylesheet" href="styleH.css">
 </head>
+
 <body>
 
 <div class="container">
 
 <nav class="nav">
     <div align="right">
-    <a href="home.html" class="active">Home</a> |
-    <a href="arrangments.html">Arrangments</a> |
-    <a href="contact.html">Contact</a>
+        <a href="home.html" class="active">Home</a> |
+        <a href="arrangments.html">Arrangments</a> |
+        <a href="contact.html">Contact</a>
     </div>
 </nav>
+
 <header>
     <div align="center">
-    <h1 class="title"> Tibeb n’ T’ej </h1>
-    <hr color="#c9a27e">
+        <h1 class="title"> Tibeb n’ T’ej </h1>
+        <hr color="#c9a27e">
     </div>
-
 </header>
 
-
-
-<section class="section">
+<section class="section card">
     <h2>About the Event</h2>
     <p>
-  Tibeb n’ T’ej  is a unique Sip & Paint experience that blends the joy of painting with the warmth of Ethiopian culture. <br>
-       Whether you’re coming with friends, on a date, or by yourself, Tibeb n’ T’ej  is the perfect way to try something new, and leave with a painting you can hang.
+        Tibeb n’ T’ej  is a unique Sip & Paint experience that blends the joy of painting with the warmth of Ethiopian culture. <br>
+        Whether you’re coming with friends, on a date, or by yourself, Tibeb n’ T’ej  is the perfect way to try something new, and leave with a painting you can hang.
     </p>
 </section>
 
-<section class="section2">
+<section class="section2 card">
     <h2>Why Join?</h2>
     <ul>
         <li>Fun and Cultural twist</li>
@@ -46,23 +45,34 @@
     </ul>
 </section>
 
-<section>
-  
-    <div align=" center" class="images">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiX57W3zuZi0PlZ6YyDQpHUI-nkq8KkvPyDg&s" width="250">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROzPbEpmR3_Sks0T1rAavXbg_F2OXLh6zKvHRf0AH0iaZwdfvWa-m6Zv_Y-CLBTvsfQJU&usqp=CAU" width="250">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGvcLsYuFnWxkO7or7lCDg_vaHxSlk8aa3A1Tx5K6sjFoHz-dnacRZkQHgjznbdyaEBRg&usqp=CAU" width="250">
+<section class="card">
+    <div align="center" class="images">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiX57W3zuZi0PlZ6YyDQpHUI-nkq8KkvPyDg&s" width="250">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROzPbEpmR3_Sks0T1rAavXbg_F2OXLh6zKvHRf0AH0iaZwdfvWa-m6Zv_Y-CLBTvsfQJU&usqp=CAU" width="250">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGvcLsYuFnWxkO7or7lCDg_vaHxSlk8aa3A1Tx5K6sjFoHz-dnacRZkQHgjznbdyaEBRg&usqp=CAU" width="250">
 
-    <p> Our happy Participants from our last  Tibeb n’ T’ej event </p> </div>
-
+        <p id="imageText"> Our happy Participants from our last  Tibeb n’ T’ej event </p>
+    </div>
 </section>
 
 <footer class="footer">
     <hr color="#c9a27e">
     <p>© 2025 Tibeb n’ T’ej  Event</p>
 </footer>
+
 </div>
+
+<script>
+  const imageText = document.getElementById("imageText");
+  document.querySelectorAll(".images img").forEach(img => {
+    img.addEventListener("mouseenter", () => {
+      imageText.textContent = "Creativity and community in every session ✨";
+    });
+    img.addEventListener("mouseleave", () => {
+      imageText.textContent = " Our happy Participants from our last  Tibeb n’ T’ej event ";
+    });
+  });
+</script>
+
 </body>
 </html>
-
-

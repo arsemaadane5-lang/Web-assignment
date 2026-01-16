@@ -8,108 +8,137 @@
 </head>
 
 <body>
+
 <div class="container">
 
-    <nav class="nav">
-        <a href="home.html">Home</a> |
-        <a href="arrangments.html" class="active" >Arrangments</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav class="nav">
+    <a href="home.html">Home</a> |
+    <a href="arrangments.html" class="active">Arrangments</a> |
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <header>
-        <h1 class="title">Tibeb n’ T’ej Arrangements</h1>
-        <hr>
-    </header>
+<header>
+    <h1 class="title">Tibeb n’ T’ej Arrangements</h1>
+    <hr>
+</header>
 
-   
-    <section class="section">
-        <h2>Schedule & Pricing</h2>
+<section class="section card">
+    <h2>Schedule & Pricing</h2>
 
-        <table class="table">
-            <tr>
-                <th colspan="4">Packages</th>
-            </tr>
+    <table class="table">
+        <tr>
+            <th colspan="4">Packages</th>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <th>Package</th>
+            <th>Includes</th>
+            <th>Price</th>
+        </tr>
 
-            <tr>
-                <th>Time</th>
-                <th>Package</th>
-                <th>Includes</th>
-                <th>Price</th>
-            </tr>
+        <tr>
+            <td rowspan="2">Morning<br>10 AM - 12 PM</td>
+            <td>Standard</td>
+            <td>Canvas, brushes, paint,Te'j (2 glass)</td>
+            <td>700 Birr</td>
+        </tr>
 
-            <tr>
-                <td rowspan="2">Morning<br>10 AM - 12 PM</td>
-                <td>Standard</td>
-                <td>Canvas, brushes, paint,Te'j (2 glass)</td>
-                <td>700 Birr</td>
-            </tr>
+        <tr>
+            <td>Deluxe</td>
+            <td>Standard + Drink of your Preference + extra canvas</td>
+            <td>1500 Birr</td>
+        </tr>
 
-            <tr>
-                <td>Deluxe</td>
-                <td>Standard + Drink of your Preference + extra canvas</td>
-                <td>1500 Birr</td>
-            </tr>
+        <tr>
+            <td rowspan="2">Evening<br>6 PM - 9 PM</td>
+            <td>Standard</td>
+            <td>Canvas, brushes, paint, T'ej (2 glass)</td>
+            <td>700 Birr</td>
+        </tr>
 
-            <tr>
-                <td rowspan="2">Evening<br>6 PM - 9 PM</td>
-                <td>Standard</td>
-                <td>Canvas, brushes, paint, T'ej (2 glass)</td>
-                <td>700 Birr</td>
-            </tr>
+        <tr>
+            <td>VIP</td>
+            <td>Standard + 2 Drinks of your Preference + frame</td>
+            <td>2000 Birr</td>
+        </tr>
+    </table>
+</section>
 
-            <tr>
-                <td>VIP</td>
-                <td>Standard + 2 Drinks of your Preference + frame</td>
-                <td>2000 Birr</td>
-            </tr>
-        </table>
-    </section>
+<section class="section card">
+    <h2>Register for Tibeb n’ T’ej</h2>
 
+    <form class="form" id="registerForm">
 
-    <section class="section">
-        <h2>Register for Tibeb n’ T’ej</h2>
-      
+        <label>Name:</label>
+        <input type="text" id="name">
 
-        <form class="form">
+        <label>Email:</label>
+        <input type="email" id="email">
 
-            <label>Name:</label>
-            <input type="text" name="name" class="name"><br><br>
+        <label>Choose Session:</label>
+        <div class="sessionB">
+            <label><input type="radio" name="session" value="700"> Morning Standard</label>
+            <label><input type="radio" name="session" value="1500"> Morning Deluxe</label>
+            <label><input type="radio" name="session" value="700"> Evening Standard</label>
+            <label><input type="radio" name="session" value="2000"> Evening VIP</label>
+        </div>
 
-            <label>Email:</label>
-            <input type="email" name="email" class="email"><br><br>
+        <p id="priceDisplay" class="price-box"><strong>Price:</strong> --</p>
 
-          <label >Choose Session:<br></label>
-            <div class="sessionB">
-    <label><input type="radio" name="session" value="morning-standard"> Morning Standard</label>
-    <label><input type="radio" name="session" value="morning-deluxe"> Morning Deluxe</label>
-    <label><input type="radio" name="session" value="evening-standard"> Evening Standard</label>
-    <label><input type="radio" name="session" value="evening-vip"> Evening VIP</label>
-            </div>
-            
-            <label>Drink Preference:</label>
-            <select name="drink" class="drinks">
-                <option>Te'j</option>
-                <option>Wine</option>
-                <option>Soft Drink</option>
-            </select><br><br>
+        <label>Number of Participants:</label>
+        <input type="number" id="count">
 
-            <label>Number of Participants:</label>
-            <input type="number" name="count" class="number"><br><br>
+        <label>Additional Order:</label>
+        <textarea rows="2" class="notes"></textarea>
 
-            <label>Special Order: </label>
-            <textarea rows="4" class="notes"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
 
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+  
+    <p id="messageBox"></p>
+</section>
 
-    <footer class="footer">
-        <hr>
-        <p>© 2025 Tibeb n’ T’ej</p>
-    </footer>
+<footer class="footer">
+    <hr>
+    <p>© 2025 Tibeb n’ T’ej</p>
+</footer>
 
 </div>
+
+<script>
+  const form = document.getElementById("registerForm");
+  const priceDisplay = document.getElementById("priceDisplay");
+  const messageBox = document.getElementById("messageBox");
+
+ 
+  document.querySelectorAll('input[name="session"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+      priceDisplay.innerHTML = "<strong>Price:</strong> " + radio.value + " Birr";
+    });
+  });
+
+ 
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const count = document.getElementById("count").value;
+    const session = document.querySelector('input[name="session"]:checked');
+
+    if (name === "" || email === "" || count === "" || !session) {
+      messageBox.textContent = "Please fill in all required fields before submitting.";
+      messageBox.style.color = "red";
+      return;
+    }
+
+    messageBox.textContent = "Registration successful! We will contact you soon.";
+    messageBox.style.color = "green";
+
+    form.reset();
+    priceDisplay.innerHTML = "<strong>Price:</strong> --";
+  });
+</script>
+
 </body>
 </html>
-
-
