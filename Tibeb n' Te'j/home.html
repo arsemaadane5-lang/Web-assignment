@@ -6,7 +6,7 @@
     <title class="title"> Tibeb n’ T’ej </title>
     <link rel="stylesheet" href="styleH.css">
 </head>
-
+<script src="script.js"></script>
 <body>
 
 <div class="container">
@@ -18,7 +18,7 @@
         <a href="contact.html">Contact</a>
     </div>
 </nav>
-
+<p id="welcomeMessage"></p>
 <header>
     <div align="center">
         <h1 class="title"> Tibeb n’ T’ej </h1>
@@ -57,22 +57,10 @@
 
 <footer class="footer">
     <hr color="#c9a27e">
-    <p>© 2025 Tibeb n’ T’ej  Event</p>
+    © <span id="footerYear"></span> Tibeb n’ T’ej
 </footer>
 
 </div>
-
-<script>
-  const imageText = document.getElementById("imageText");
-  document.querySelectorAll(".images img").forEach(img => {
-    img.addEventListener("mouseenter", () => {
-      imageText.textContent = "Creativity and community in every session ✨";
-    });
-    img.addEventListener("mouseleave", () => {
-      imageText.textContent = " Our happy Participants from our last  Tibeb n’ T’ej event ";
-    });
-  });
-</script>
-
 </body>
 </html>
+
