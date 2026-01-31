@@ -6,7 +6,7 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="styleC.css">
 </head>
-
+<script src="script.js"></script>
 <body>
 
 <div class="container">
@@ -58,65 +58,10 @@
 
     <footer class="footer">
         <hr>
-        <p>© 2025 Tibeb n’ T’ej</p>
+          © <span id="footerYear"></span> Tibeb n’ T’ej
     </footer>
 
 </div>
-
-
-<script>
-  const form = document.getElementById("contactForm");
-  const formMessage = document.getElementById("formMessage");
-  const messageInput = document.getElementById("contactMessageInput");
-  const charCount = document.getElementById("charCount");
-
-  const copyBtn = document.getElementById("copyEmailBtn");
-  const emailText = document.getElementById("emailText");
-
-  messageInput.addEventListener("input", () => {
-    charCount.textContent = messageInput.value.length + " / 200 characters";
-  });
-
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("contactName").value;
-    const email = document.getElementById("contactEmail").value;
-    const message = messageInput.value;
-
-    if (name === "" || email === "" || message === "") {
-      formMessage.textContent = "Please fill in all fields.";
-      formMessage.style.color = "red";
-      return;
-    }
-
-    if (message.length > 200) {
-      formMessage.textContent = "Message must be under 200 characters.";
-      formMessage.style.color = "red";
-      return;
-    }
-
-    formMessage.textContent = "Message sent successfully! We’ll get back to you soon 😊";
-    formMessage.style.color = "green";
-
-    form.reset();
-    charCount.textContent = "0 / 200 characters";
-
-    setTimeout(() => {
-      formMessage.textContent = "";
-    }, 4000);
-  });
-
-  copyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(emailText.textContent);
-    formMessage.textContent = "Email copied to clipboard ✔";
-    formMessage.style.color = "green";
-
-    setTimeout(() => {
-      formMessage.textContent = "";
-    }, 3000);
-  });
-</script>
-
 </body>
 </html>
+
