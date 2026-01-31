@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ charset="UTF-8">
+    <meta nam    <metae="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tibeb n’ T’ej</title>
     <link rel="stylesheet" href="styleA.css">
 </head>
-
+<script src="script.js"></script>
 <body>
 
 <div class="container">
@@ -100,45 +100,10 @@
 
 <footer class="footer">
     <hr>
-    <p>© 2025 Tibeb n’ T’ej</p>
+  © <span id="footerYear"></span> Tibeb n’ T’ej
 </footer>
 
 </div>
-
-<script>
-  const form = document.getElementById("registerForm");
-  const priceDisplay = document.getElementById("priceDisplay");
-  const messageBox = document.getElementById("messageBox");
-
- 
-  document.querySelectorAll('input[name="session"]').forEach(radio => {
-    radio.addEventListener("change", () => {
-      priceDisplay.innerHTML = "<strong>Price:</strong> " + radio.value + " Birr";
-    });
-  });
-
- 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const count = document.getElementById("count").value;
-    const session = document.querySelector('input[name="session"]:checked');
-
-    if (name === "" || email === "" || count === "" || !session) {
-      messageBox.textContent = "Please fill in all required fields before submitting.";
-      messageBox.style.color = "red";
-      return;
-    }
-
-    messageBox.textContent = "Registration successful! We will contact you soon.";
-    messageBox.style.color = "green";
-
-    form.reset();
-    priceDisplay.innerHTML = "<strong>Price:</strong> --";
-  });
-</script>
-
 </body>
 </html>
+
